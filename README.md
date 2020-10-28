@@ -1,5 +1,6 @@
 # customer-checkout-UI-tests
 
+
 **Version 1.0.0**
 
 Code and document samples for the writing a README test 

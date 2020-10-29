@@ -26,7 +26,7 @@ public class Driver {
     public static WebDriver get() {
 
             if (driver == null) {
-                switch (ConfigurationReader.get("BROWSER_TYPE")) {
+                switch (ConfigurationReader.get("BROWSER")) {
                     case "chrome":
                         WebDriverManager.chromedriver().setup();
                         driver = new ChromeDriver();

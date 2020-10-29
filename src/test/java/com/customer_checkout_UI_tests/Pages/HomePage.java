@@ -26,7 +26,7 @@ public class HomePage {
     @FindBy(xpath = "//a[@title='View my shopping cart']")
     public WebElement homePageCart;
 
-    @FindBy(xpath = "//a[@title='Printed Chiffon Dress']")
+    @FindBy(xpath = "//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]")
     public WebElement printedChiffonDressImg;
 
     @FindBy(xpath = "//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]/div[1]/div[2]/div[2]/a[2]")

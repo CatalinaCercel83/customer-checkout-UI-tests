@@ -114,9 +114,10 @@ public class AddToCartFunctionality_StepDef {
         BrowserUtils.waitFor(2);
 
         if(string2.contains("QUICKVIEW")){
-            actions.moveToElement(quickViewOption).perform();
+
             BrowserUtils.waitForClickablility(By.xpath("//body/div[@id='page']/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]/div[1]/div[1]/div[1]/a[2]"),5);
             quickViewOption.click();
+            //quickViewOption.click();
         }
     }
 
@@ -124,19 +125,18 @@ public class AddToCartFunctionality_StepDef {
     public void visiting_the_selected_product_iFrame_Fancybox_is_choosing_option(String string) {
 
         WebElement addToCartIFrame = iFramePage.addToCart;
+        WebElement selectingIFrame = iFramePage.iFrameDynamicPresenece;
+
         BrowserUtils.waitFor(2);
-        //driver.switchTo().frame("fancybox-frame1603935630599");
+        driver.switchTo().frame(selectingIFrame);
 
         BrowserUtils.waitFor(2);
 
         if(string.equals("ADDTOCART")) {
-            BrowserUtils.waitForClickablility(By.xpath("//body/div[1]/div[1]/div[3]/form[1]/div[1]/div[3]/div[1]/p[1]/button[1]"),5);
-            //actions.moveToElement(addToCartIFrame).perform();
            addToCartIFrame.click();
         }
-        //driver.switchTo().defaultContent();
 
-        layerCartPage.proceedToCheckout.click();
-
+        driver.switchTo().defaultContent();
+        BrowserUtils.waitFor(2);
     }
 }

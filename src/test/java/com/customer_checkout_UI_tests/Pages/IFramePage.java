@@ -14,6 +14,6 @@ public class IFramePage {
     @FindBy(xpath = "//span[contains(text(),'Add to cart')]")
     public WebElement addToCart;
 
-    @FindBy(xpath = "//iframe[@id='fancybox-frame1603931828848']")
-    public WebElement iFramePresenece;
+    @FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/iframe[1]")
+    public WebElement iFrameDynamicPresenece;
 }
